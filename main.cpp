@@ -11,7 +11,7 @@ int main(){
     Referee referee;
     Player* winner = referee.refGame(&humanPlayer, &computerPlayer);
     if(winner){
-        cout<<winner->getName()<<"Wins."<<endl;
+        cout<<winner->getName()<<" Wins."<<endl;
     } else{
         cout<<"It's a Tie."<<endl;
     }

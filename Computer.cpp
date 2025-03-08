@@ -4,5 +4,5 @@ char Computer::makeMove(){
     return 'R'; //returning roclk for this prac
 }
 string Computer::getName(){
-    return "computer";
+    return "Computer";
 }

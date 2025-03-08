@@ -3,7 +3,6 @@ using namespace std;
 Human::Human( string playerName):name(playerName){}
 char Human::makeMove(){ //char 4 RSP movemnts
     char move;
-    cout<<"Enter move: ";
     cin>>move;
     return move;
 }
