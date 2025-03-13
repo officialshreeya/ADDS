@@ -1,8 +1,10 @@
 #ifndef HUMAN_H
 #define HUMAN_H
+
 #include "Player.h"
 #include <iostream>
-#include <memory>  // for knowleagable kind of pointers
+#include <memory>  // smrt pointers
+
 class Human : public Player {
 private:
     std::string name;
@@ -11,4 +13,5 @@ public:
     Move* makeMove() override;
     std::string getName() override;
 };
+
 #endif
