@@ -8,11 +8,9 @@
 #include "Ninja.h"
 #include "Zombie.h"
 #include <cstdlib>  // For rand()
-#include <ctime>    // For seeding rand()
 
 Move* Computer::makeMove() {
-    srand(time(nullptr));  // Seed the random generator
-    int choice = rand() % 8;  // Fix: Change to 8
+    int choice = rand() % 8;  
 
     switch (choice) {
         case 0: return new Rock();
@@ -26,6 +24,8 @@ Move* Computer::makeMove() {
         default: return new Rock();  // Just in case
     }
 }
+
+
 std::string Computer::getName() {
     return "Computer";
 }
