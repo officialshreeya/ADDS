@@ -1,8 +1,9 @@
 #include "Computer.h"
+#include "Monkey.h"
 using namespace std;
-char Computer::makeMove(){
-    return 'R'; //returning roclk for this prac
+Move* Computer::makeMove() {
+    return new Monkey();  // making compplay monkeys
 }
-string Computer::getName(){
+string Computer::getName() {
     return "Computer";
 }

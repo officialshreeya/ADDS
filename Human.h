@@ -1,17 +1,14 @@
 #ifndef HUMAN_H
 #define HUMAN_H
-
 #include "Player.h"
 #include <iostream>
-
-class Human : public Player { //inherited frm abstract class
+#include <memory>  // for knowleagable kind of pointers
+class Human : public Player {
 private:
     std::string name;
 public:
     Human(std::string playerName = "Human");
-    //overriding abs class.. 4 mods
-    char makeMove() override;
+    Move* makeMove() override;
     std::string getName() override;
 };
-
 #endif
