@@ -4,10 +4,10 @@
 #include "Pirate.h"
 #include "Ninja.h"
 #include "Zombie.h"
+#include "Rock.h"
 using namespace std;
 
 Human::Human(string playerName): name(playerName) {}
-
 Move* Human::makeMove() {
     string move;
     cin >> move;
@@ -17,8 +17,8 @@ Move* Human::makeMove() {
     if (move == "Pirate") return new Pirate();
     if (move == "Ninja") return new Ninja();
     if (move == "Zombie") return new Zombie();
-    if (move == "Rock") return new Monkey(); // a Rock class
-    return new Monkey();  // Default to Monkey 
+    if (move == "Rock") return new Rock();  
+    return new Monkey();  // Default to Monkey if the input is invalid
 }
 
 string Human::getName() {
