@@ -7,11 +7,22 @@
 #include "Pirate.h"
 #include "Ninja.h"
 #include "Zombie.h"
-#include <cstdlib>  // For rand()
+#include <cstdlib>
+
+Computer::Computer() {
+    fixedMove = nullptr;  
+}
+
+Computer::Computer(Move* move) {
+    fixedMove = move;  
+}
 
 Move* Computer::makeMove() {
-    int choice = rand() % 8;  
+    if (fixedMove) {
+        return new Rock();  
+    }
 
+    int choice = rand() % 8;
     switch (choice) {
         case 0: return new Rock();
         case 1: return new Paper();
@@ -21,11 +32,11 @@ Move* Computer::makeMove() {
         case 5: return new Pirate();
         case 6: return new Ninja();
         case 7: return new Zombie();
-        default: return new Rock();  // Just in case
+        default: return new Rock();
     }
 }
-
 
 std::string Computer::getName() {
     return "Computer";
 }
+
