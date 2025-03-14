@@ -5,9 +5,11 @@
 #include "Move.h"
 
 class Player {
-public:
-    virtual Move* makeMove() = 0;
-    virtual std::string getName() = 0;
-    virtual ~Player() {}  
-};
-#endif
+    protected:
+        std::string name;
+    public:
+        virtual Move* makeMove() = 0;
+        virtual std::string getName() { return name; }  
+        virtual ~Player() {}  
+    };
+    #endif

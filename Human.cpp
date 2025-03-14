@@ -29,7 +29,8 @@ Move* Human::makeMove() {
     if (move == "Ninja") return new Ninja();
     if (move == "Zombie") return new Zombie();
 
-    return new Rock();  
+    std::cout << "Invalid move entered!" << std::endl;
+    return nullptr;  
 }
 
 string Human::getName() {

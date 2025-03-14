@@ -19,7 +19,7 @@ Computer::Computer(Move* move) {
 
 Move* Computer::makeMove() {
     if (fixedMove) {
-        return new Rock();  
+        return fixedMove;  
     }
 
     int choice = rand() % 8;
