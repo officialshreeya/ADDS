@@ -21,11 +21,12 @@ int main() {
     Player* winner = referee.refGame(&humanPlayer, &computerPlayer);
     
     if (winner == nullptr) {
-        
-        cout << "Tie " << humanPlayer.getName() << " " << "Computer Computer" << endl;
+        // Fix tie case output format
+        cout << "Tie " << humanPlayer.getName() << " Computer Computer" << endl;
     } else {
         cout << winner->getName() << " Wins!" << endl;
     }
 
     return 0;
 }
+
