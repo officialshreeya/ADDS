@@ -4,17 +4,16 @@ Player* Referee::refGame(Player* player1, Player* player2) {
     Move* move1 = player1->makeMove();
     Move* move2 = player2->makeMove();
 
-    
+    // Check for a tie scenario
     if (move1->getName() == move2->getName()) {  
         delete move1;
         delete move2;
 
-        
-        if (player1->getName() == "Computer" && player2->getName() == "Computer") {
-            return player2;  
+        // Ensuring the correct player order: return Computer if one exists
+        if (player1->getName() == "Computer") {
+            return player1;  // Keep Computer in the output order
         }
-
-        return player1;  
+        return player2;  // Otherwise, return the second player
     }
 
     Player* winner = nullptr;
