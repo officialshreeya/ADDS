@@ -3,7 +3,7 @@
 #include "Rock.h"
 
 bool Scissors::beats(Move* other) {
-    if (dynamic_cast<Paper*>(other)) return true;   // Scissors cut Paper
-    if (dynamic_cast<Rock*>(other)) return false;   // Rock beats Scissors
+    if (dynamic_cast<Paper*>(other)) return true;   // S cut p
+    if (dynamic_cast<Rock*>(other)) return false;   // Rock beat scissors
     return false;
 }

@@ -1,7 +1,7 @@
 #include "Computer.h"
 #include "Rock.h"
 
-Computer::Computer() {
+Computer::Computer() { //computer should alway output rock
     fixedMove = new Rock();  
 }
 

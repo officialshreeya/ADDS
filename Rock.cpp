@@ -6,10 +6,10 @@
 #include "Zombie.h"
 
 bool Rock::beats(Move* other) {
-    if (dynamic_cast<Monkey*>(other)) return true;  // Rock beats Monkey
-    if (dynamic_cast<Robot*>(other)) return false;  // Robot beats Rock
-    if (dynamic_cast<Pirate*>(other)) return false; // Pirate beats Rock
-    if (dynamic_cast<Ninja*>(other)) return true;   // Rock beats Ninja
-    if (dynamic_cast<Zombie*>(other)) return true;  // Rock beats Zombie
+    if (dynamic_cast<Monkey*>(other)) return true;  // R BEATS M
+    if (dynamic_cast<Robot*>(other)) return false;  // Rob BEATS R
+    if (dynamic_cast<Pirate*>(other)) return false; // P BEATS ROCK
+    if (dynamic_cast<Ninja*>(other)) return true;   // Rock BEATS N
+    if (dynamic_cast<Zombie*>(other)) return true;  // R BEATS Z
     return false;
 }

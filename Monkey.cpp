@@ -4,9 +4,9 @@
 #include "Ninja.h"
 #include "Zombie.h"
 bool Monkey::beats(Move* other) {
-    if (dynamic_cast<Robot*>(other)) return false;  // Robot beats Monkey
-    if (dynamic_cast<Pirate*>(other)) return true;   // Monkey beats Pirate
-    if (dynamic_cast<Ninja*>(other)) return false;  // Ninja beats Monkey
-    if (dynamic_cast<Zombie*>(other)) return true;  // Monkey beats Zombie
+    if (dynamic_cast<Robot*>(other)) return false;  // R BEATS M
+    if (dynamic_cast<Pirate*>(other)) return true;   // M BEATS P
+    if (dynamic_cast<Ninja*>(other)) return false;  // N BEATS M
+    if (dynamic_cast<Zombie*>(other)) return true;  // M BEATS Z
     return false;
 }

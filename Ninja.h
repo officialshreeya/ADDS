@@ -7,7 +7,7 @@ class Ninja : public Move {
 public:
     string getName() override { return "Ninja"; }
     bool beats(Move* other) override;
-    virtual ~Ninja() {}  // Virtual Destructor
+    virtual ~Ninja() {}  
 };
 
 #endif

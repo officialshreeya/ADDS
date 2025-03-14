@@ -4,11 +4,11 @@ Player* Referee::refGame(Player* player1, Player* player2) {
     Move* move1 = player1->makeMove();
     Move* move2 = player2->makeMove();
 
-    // Handle tie scenario
+    // Fixing tie scenario
     if (move1->getName() == move2->getName()) {  
         delete move1;
         delete move2;
-        return nullptr;  // Return nullptr for a tie
+        return nullptr;  //4tie..
     }
 
     Player* winner = nullptr;

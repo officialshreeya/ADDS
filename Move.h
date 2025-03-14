@@ -4,8 +4,8 @@
 using namespace std;
 class Move {
 public:
-    virtual string getName() = 0;  // name of move
-    virtual bool beats(Move* other) = 0;  // Determines move beatings
+    virtual string getName() = 0;  
+    virtual bool beats(Move* other) = 0;  
     virtual ~Move() {}
 };
 #endif

@@ -11,9 +11,8 @@
 
 using namespace std;
 
-//  Constructor Definition
 Human::Human(std::string playerName) {
-    name = playerName;  // Store the player name
+    name = playerName;  
 }
 
 Move* Human::makeMove() {
@@ -29,7 +28,7 @@ Move* Human::makeMove() {
     if (move == "Ninja") return new Ninja();
     if (move == "Zombie") return new Zombie();
 
-    std::cout << "Invalid move entered!" << std::endl;
+    std::cout << "Invalid move" << std::endl;
     return nullptr;  
 }
 

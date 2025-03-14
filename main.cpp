@@ -21,7 +21,7 @@ int main() {
     Player* winner = referee.refGame(&humanPlayer, &computerPlayer);
     
     if (winner == nullptr) {
-        // Fix tie case output format by ensuring "Computer Computer"
+        // trying tofix the integration error?? not sure if this mifght be right
         cout << "Tie " << humanPlayer.getName() << " Computer Computer" << endl;
     } else {
         cout << winner->getName() << " Wins!" << endl;
