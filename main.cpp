@@ -5,12 +5,12 @@
 #include "Computer.h"
 #include "Referee.h"
 #include "Rock.h"  
+
 using namespace std;
 
 int main() {
     srand(time(nullptr));  
 
-    
     string playerName;
     cin >> playerName;
 
@@ -18,13 +18,13 @@ int main() {
     Computer computerPlayer(new Rock()); 
     Referee referee;
 
-    
     Player* winner = referee.refGame(&humanPlayer, &computerPlayer);
     
-    if (winner) {
-        cout << winner->getName() << " Wins!" << endl;
+    if (winner == nullptr) {
+        
+        cout << "Tie " << humanPlayer.getName() << " " << "Computer Computer" << endl;
     } else {
-        cout << "It's a Tie!" << endl;
+        cout << winner->getName() << " Wins!" << endl;
     }
 
     return 0;
