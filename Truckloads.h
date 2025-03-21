@@ -1,6 +1,6 @@
 #ifndef Tloads_H
 #define Tloads_H
-class Tloads {
+class Truckloads {
 public:
     int numTrucks(int numCrates, int loadSize);
 };
